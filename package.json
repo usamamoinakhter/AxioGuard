@@ -1,0 +1,46 @@
+{
+  "name": "axioguard",
+  "version": "1.0.0",
+  "description": "A smart Axios wrapper with optional caching and request deduplication.",
+  "keywords": [
+    "axios",
+    "cache",
+    "deduplication",
+    "http",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "",
+  "sideEffects": false,
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "jest",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^1.6.8"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.30",
+    "axios-mock-adapter": "^1.21.2",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.4.5"
+  }
+}
